@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        fieldset {
+            background: #e1eff2;
+        }
+
+        legend {
+            padding: 20px 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<head>
+    <h1>Результаты инструментальных и лабораторных исследований</h1>
+</head>
+
+
+<body>
+    <form action="{{url_for('main')}}" method="POST">
+        <fieldset>
+            <small>ИМТ</small>
+            <input type="text" name="imt">
+            <br>
+            <br>
+            <small>КРЕАТИНИН</small>
+            <input type="text" name="krt">
+            <br>
+            <br>
+            <small>ЩЕЛОЧНАЯ ФОСФАТАЗА</small>
+            <input type="text" name="schph">
+            <br>
+            <br>
+            <small>КАЛЬЦИЙ</small>
+            <input type="text" name="calc">
+            <br>
+            <br>
+            <small>ФОСФОР</small>
+            <input type="text" name="ph">
+            <br>
+            <br>
+            <small>ТЕСТОСТЕРОН</small>
+            <input type="text" name="tsts">
+            <br>
+            <br>
+            <small>КФК</small>
+            <input type="text" name="kfk">
+            <br>
+            <br>
+            <small>ВИТ_Д3</small>
+            <input type="text" name="vd3">
+            <br>
+            <br>
+            <small>ПТГ</small>
+            <input type="text" name="ptg">
+            <br>
+            <br>
+            <small>ALF-CR-L</small>
+            <input type="text" name="alf">
+            <br>
+            <br>
+            <small>BETA-CR-L</small>
+            <input type="text" name="bet">
+            <br>
+            <br>
+            <small>КТ-Z-БЕДР</small>
+            <input type="text" name="kzb">
+            <br>
+            <br>
+            <small>КТ_Z_L1</small>
+            <input type="text" name="kzl">
+            <br>
+            <br>
+            <small>УЗИ_Z-ПК</small>
+            <input type="text" name="uzi">
+            <br>
+            <br>
+                        
+        </fieldset>
+        <button type="submit">ПОЛУЧИТЬ ДИАГНОЗ</button>
+    </form>
+
+    <div>
+        {%if result %}
+        <p>Диагноз: </p>
+        <p>{{result}}</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>

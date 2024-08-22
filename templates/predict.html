@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        fieldset {
+            background: #e1eff2;
+        }
+
+        legend {
+            padding: 20px 0;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<head>
+    <h1>ДИАГНОЗ</h1>
+</head>
+
+<body>
+    <div>
+        {%if result==0 %}
+        <p>Диагноз: Вы здоровы</p>
+        <p>{{result}}</p>
+        {% elif result ==1 %}
+	<p>Диагноз: остеопения без осложнений</p>
+        <p>{{result}}</p>
+	{% elif result ==2 %}
+	<p>Диагноз: остеопения + гиперкальцемия</p>
+        <p>{{result}}</p>
+	{% elif result ==3 %}
+	<p>Диагноз: остеопения + гипокальцемия</p>
+        <p>{{result}}</p>
+	{% elif result ==4 %}
+	<p>Диагноз: остеопороз без осложнений</p>
+        <p>{{result}}</p>
+	{% elif result ==5 %}
+	<p>Диагноз: остеопороз + гиперкальцемия</p>
+        <p>{{result}}</p>
+	{% elif result ==6 %}
+	<p>Диагноз: остеопороз + гипокальцемия</p>
+        <p>{{result}}</p>
+	{% endif%}
+    </div>
+
+</body>
+
+</html>
